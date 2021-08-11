@@ -1,3 +1,7 @@
+import sys
+sys.path.append(sys.path[0] + "/....")
+import os
+sys.path.append(os.getcwd())
 import unittest
 from Test.TestBase.EnvSetUp import EnvSetUp
 from Test.TestUtils import Utils as UT
