@@ -1,5 +1,6 @@
 import sys
 import json
+import datetime
 
 ROOT_DIR = str(sys.path[0])
 PARAMS_JSON_FILE = "\\params.json"
@@ -26,6 +27,12 @@ def format_xpath(draft_xpath, format_value):
     """Creates a formatted xpath from a draft xpath and a reference value"""
     xpath = str(draft_xpath).format(VALUE=format_value)
     return xpath
+
+
+def get_screenshot(driver):
+    now = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    driver.get_screenshot_as_file(ROOT_DIR + '\\Screenshots\\screenshot-%s.png' % now)
+    print(ROOT_DIR)
 
 
 
