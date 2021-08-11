@@ -1,8 +1,8 @@
 import sys
 import json
 
-ROOT_DIR = str(sys.path[1])
-PARAMS_JSON_FILE = "/Test/Scripts/params.json"
+ROOT_DIR = str(sys.path[0])
+PARAMS_JSON_FILE = "\\params.json"
 """Defining the paths for the root directory and the parameters JSON file"""
 
 
