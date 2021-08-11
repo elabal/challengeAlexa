@@ -22,6 +22,12 @@ def save_param(key, value):
         f.write(json.dumps(data, indent=4, separators=(',', ': ')))
 
 
+def format_xpath(draft_xpath, format_value):
+    """Creates a formatted xpath from a draft xpath and a reference value"""
+    xpath = str(draft_xpath).format(VALUE=format_value)
+    return xpath
+
+
 
 
 
