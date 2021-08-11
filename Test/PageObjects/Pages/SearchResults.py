@@ -7,9 +7,9 @@ from Test.TestUtils import Utils as UT
 
 class SearchResults(object):
 
-    def __init__(self, driver, item):
+    def __init__(self, driver, search_value):
         self.driver = driver
-        searched_item = UT.format_xpath(Locator.header_results_for_searched_item, item)
+        searched_item = UT.format_xpath(Locator.header_results_for_searched_item, search_value)
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, searched_item)))
 
     def select_page_by_number(self, number):
