@@ -49,6 +49,7 @@ class EnvSetUp(unittest.TestCase):
     def tearDown(self):
         if self.test_failed:
             print("EXECUTION FAILED AT: " + self.driver.current_url)
+            UT.get_screenshot(self.driver)
         print("Run finished at : " + str(datetime.now()))
         self.driver.close()
         self.driver.quit()
