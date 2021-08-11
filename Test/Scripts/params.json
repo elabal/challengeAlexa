@@ -1,0 +1,5 @@
+{
+  "base_url": "www.amazon.com",
+  "browser": "chrome",
+  "headless": "false"
+}
